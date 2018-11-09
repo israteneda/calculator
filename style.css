@@ -1,0 +1,104 @@
+/*Improt Nunito Google font*/
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/*
+* Elemental Styles
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input, button { 
+    outline: none;     
+    border:none; 
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button {
+    color: white;
+    font-size: 18px;
+    background-color: #393E46;
+    padding: 1em;
+    border-radius: 5px;
+    cursor:pointer;
+    box-shadow: -4px 5px 1px rgba(0,0,0,.3);
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+/*
+* Classes Styles
+*/
+
+.text-center {
+    text-align: center;
+}
+
+.claculator-header{
+    display: flex;
+}
+
+.calculator {
+    border-radius: 10px;
+    width: 15em;
+    margin: 0 auto;
+    max-height: 100vh;
+    background-color: #3c4542;
+    padding: 30px;
+}
+
+.calculator-screen {
+    display: inline-block;
+    background-color: #FFF4E0;
+    padding: 1em;
+    margin: 20px 0 30px;
+    border-radius: 1em;
+    text-align: right;
+    border: 2px solid grey;
+    box-shadow: -4px 5px 1px rgba(0,0,0,.3);
+    width: 150px;
+    margin-right: 7px;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.operator {
+    color: white;
+    background-color: #00ADB5;
+    
+}
+
+.all-clear {
+    background-color: #F8B500;
+    padding: 10px 14px;
+    border-radius: 50%;
+}
+
+.equal {
+    background-color: #FC3C3C;
+}
+
+/*
+* ID Styles
+*/
+
+#title {
+    margin: 5% auto 1em;
+}
