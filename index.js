@@ -5,42 +5,24 @@ const clear = document.getElementById("all-clear")
 
 let screenValue, firstValue, secondValue, operator, result;
 
-keys.addEventListener('click', e => {
+keys.addEventListener('click', event => {
     
- if (e.target.matches('button') && e.target.className != "operator" && e.target.id != "equal") {
+ if (event.target.matches('button') && event.target.id != "equal") {
         screenValue = screen.value += event.target.value;
  }
- 
- if(e.target.className == "operator") {
-       operator = e.target.value;
-       firstValue = screenValue;
-       screen.value = ""
-   }
     
-  if(e.target.id == "equal") {
-      
-       secondValue = screenValue;
+  if(event.target.id == "equal") {
        
-       screen.value = "";
-       
-       if (operator == "+") {
-           result = parseFloat(firstValue) + parseFloat(secondValue);
-       } else if (operator == "-") {
-           result = parseFloat(firstValue) - parseFloat(secondValue);
-       } else if (operator == "*") {
-           result = parseFloat(firstValue) * parseFloat(secondValue);
-       } else if(operator == "/") {
-           result = parseFloat(firstValue) / parseFloat(secondValue);
-       }
-       
-       screen.value = result;
-       screenValue = result;
+      result = eval(screenValue);
+      screen.value = result;
+      screenValue = result;
+    
    }
  
 })
 
-clear.addEventListener('click', e => {
-   if(e.target.id == "all-clear") {
+clear.addEventListener('click', event => {
+   if(event.target.id == "all-clear") {
        screen.value = "";
    }
 })
